@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* External google font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+/*Font Awesome Icons*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/*Custom styles*/
+@layer base {
+    body {
+        @apply font-rubik;
+    }
+    .btn {
+        @apply px-4 py-3 rounded-md shadow-lg hover:filter hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    }
+    .title {
+        @apply font-medium text-2xl text-bookmark-dark-blue md:text-4xl;
+    }
+    .active {
+        @apply bg-blue-200 text-blue-700 outline-none hover:filter hover:brightness-105;
+    }
+    .center {
+        @apply flex flex-col items-center justify-center;
+    }
+    .tooltip::before {
+        @apply absolute
+        content-[attr(data-tooltip)]
+        top-[30%]
+        left-[4rem]
+        transform
+        translate-y-[30%]
+        bg-[#dbeafe]
+        px-[0.4rem]
+        py-[0.1rem]
+        rounded-md
+        opacity-0
+        invisible
+        transition-all
+        duration-700;
+    }
+    .tooltip:hover::before {
+        @apply opacity-100
+        visible
+        translate-y-[-50%];
+    }
+    .hide-el {
+        @apply invisible opacity-0 transform translate-y-10;
+    }
+    .show-el {
+        @apply visible opacity-100  translate-y-0;
+    }
+    .focus-outline{
+        @apply p-2 outline-none border-none rounded-md focus:ring-2 focus:ring-offset-4 focus:ring-bookmark-blue;
+    }
+}

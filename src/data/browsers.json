@@ -1,0 +1,20 @@
+[
+    {
+        "index": 0,
+        "browserName": "Chrome",
+        "browserImage": "/images/logo-chrome.svg",
+        "browserMinVersion": 62
+    },
+    {
+        "index": 1,
+        "browserName": "Firefox",
+        "browserImage": "/images/logo-firefox.svg",
+        "browserMinVersion": 55
+    },
+    {
+        "index": 2,
+        "browserName": "Opera",
+        "browserImage": "/images/logo-opera.svg",
+        "browserMinVersion": 46
+    }
+]
